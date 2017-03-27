@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>README</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); overflow: auto; background-color: rgb(40, 44, 52); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors,
+.host {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+.host .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region,
+.host .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region,
+.host .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region,
+.host .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right,
+.host .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #abb2bf;
+}
+.comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.comment .markup.link {
+  color: #5c6370;
+}
+.entity.name.type {
+  color: #e5c07b;
+}
+.entity.other.inherited-class {
+  color: #98c379;
+}
+.keyword {
+  color: #c678dd;
+}
+.keyword.control {
+  color: #c678dd;
+}
+.keyword.operator {
+  color: #abb2bf;
+}
+.keyword.other.special-method {
+  color: #61afef;
+}
+.keyword.other.unit {
+  color: #d19a66;
+}
+.storage {
+  color: #c678dd;
+}
+.storage.type.annotation,
+.storage.type.primitive {
+  color: #c678dd;
+}
+.storage.modifier.package,
+.storage.modifier.import {
+  color: #abb2bf;
+}
+.constant {
+  color: #d19a66;
+}
+.constant.variable {
+  color: #d19a66;
+}
+.constant.character.escape {
+  color: #56b6c2;
+}
+.constant.numeric {
+  color: #d19a66;
+}
+.constant.other.color {
+  color: #56b6c2;
+}
+.constant.other.symbol {
+  color: #56b6c2;
+}
+.variable {
+  color: #e06c75;
+}
+.variable.interpolation {
+  color: #be5046;
+}
+.variable.parameter {
+  color: #abb2bf;
+}
+.string {
+  color: #98c379;
+}
+.string.regexp {
+  color: #56b6c2;
+}
+.string.regexp .source.ruby.embedded {
+  color: #e5c07b;
+}
+.string.other.link {
+  color: #e06c75;
+}
+.punctuation.definition.comment {
+  color: #5c6370;
+}
+.punctuation.definition.method-parameters,
+.punctuation.definition.function-parameters,
+.punctuation.definition.parameters,
+.punctuation.definition.separator,
+.punctuation.definition.seperator,
+.punctuation.definition.array {
+  color: #abb2bf;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #61afef;
+}
+.punctuation.definition.bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #be5046;
+}
+.punctuation.section.method,
+.punctuation.section.class,
+.punctuation.section.inner-class {
+  color: #abb2bf;
+}
+.support.class {
+  color: #e5c07b;
+}
+.support.type {
+  color: #56b6c2;
+}
+.support.function {
+  color: #56b6c2;
+}
+.support.function.any-method {
+  color: #61afef;
+}
+.entity.name.function {
+  color: #61afef;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #e5c07b;
+}
+.entity.name.section {
+  color: #61afef;
+}
+.entity.name.tag {
+  color: #e06c75;
+}
+.entity.other.attribute-name {
+  color: #d19a66;
+}
+.entity.other.attribute-name.id {
+  color: #61afef;
+}
+.meta.class {
+  color: #e5c07b;
+}
+.meta.class.body {
+  color: #abb2bf;
+}
+.meta.method-call,
+.meta.method {
+  color: #abb2bf;
+}
+.meta.definition.variable {
+  color: #e06c75;
+}
+.meta.link {
+  color: #d19a66;
+}
+.meta.require {
+  color: #61afef;
+}
+.meta.selector {
+  color: #c678dd;
+}
+.meta.separator {
+  background-color: #373b41;
+  color: #abb2bf;
+}
+.meta.tag {
+  color: #abb2bf;
+}
+.underline {
+  text-decoration: underline;
+}
+.none {
+  color: #abb2bf;
+}
+.invalid.deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.invalid.illegal {
+  color: #ffffff !important;
+  background-color: #e05252 !important;
+}
+.markup.bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #c678dd;
+}
+.markup.deleted {
+  color: #e06c75;
+}
+.markup.italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.markup.heading {
+  color: #e06c75;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #61afef;
+}
+.markup.link {
+  color: #c678dd;
+}
+.markup.inserted {
+  color: #98c379;
+}
+.markup.quote {
+  color: #d19a66;
+}
+.markup.raw {
+  color: #98c379;
+}
+.source.c .keyword.operator {
+  color: #c678dd;
+}
+.source.cpp .keyword.operator {
+  color: #c678dd;
+}
+.source.cs .keyword.operator {
+  color: #c678dd;
+}
+.source.css .property-name,
+.source.css .property-value {
+  color: #828997;
+}
+.source.css .property-name.support,
+.source.css .property-value.support {
+  color: #abb2bf;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .link .entity {
+  color: #61afef;
+}
+.source.go .storage.type.string {
+  color: #c678dd;
+}
+.source.ini .keyword.other.definition.ini {
+  color: #e06c75;
+}
+.source.java .storage.modifier.import {
+  color: #e5c07b;
+}
+.source.java .storage.type {
+  color: #e5c07b;
+}
+.source.java .keyword.operator.instanceof {
+  color: #c678dd;
+}
+.source.java-properties .meta.key-pair {
+  color: #e06c75;
+}
+.source.java-properties .meta.key-pair > .punctuation {
+  color: #abb2bf;
+}
+.source.js .keyword.operator {
+  color: #56b6c2;
+}
+.source.js .keyword.operator.delete,
+.source.js .keyword.operator.in,
+.source.js .keyword.operator.of,
+.source.js .keyword.operator.instanceof,
+.source.js .keyword.operator.new,
+.source.js .keyword.operator.typeof,
+.source.js .keyword.operator.void {
+  color: #c678dd;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #e06c75;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #98c379;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #56b6c2;
+}
+.source.ruby .constant.other.symbol > .punctuation {
+  color: inherit;
+}
+.source.python .keyword.operator.logical.python {
+  color: #c678dd;
+}
+.source.python .variable.parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="git-">Git 应用分享</h1>
+<ul>
+<li>Author: 金正 <a href="mailto:jinzheng@miaozhen.com">&#106;&#x69;&#110;&#x7a;&#104;&#x65;&#x6e;&#103;&#x40;&#x6d;&#105;&#x61;&#111;&#x7a;&#104;&#101;&#110;&#x2e;&#x63;&#111;&#x6d;</a></li>
+</ul>
+<h1 id="-">分享内容</h1>
+<ul>
+<li><p>什么是 Git ？</p>
+</li>
+<li><p>初始化配置</p>
+</li>
+<li><p>本地变更</p>
+</li>
+<li><p>分支管理</p>
+</li>
+<li><p>远程操作</p>
+</li>
+<li><p>项目管理</p>
+</li>
+</ul>
+<h1 id="-git-">什么是 Git ？</h1>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Git&nbsp;is&nbsp;a&nbsp;free&nbsp;and&nbsp;open&nbsp;source&nbsp;distributed&nbsp;version&nbsp;control&nbsp;system&nbsp;designed&nbsp;to&nbsp;handle&nbsp;everything&nbsp;from&nbsp;small&nbsp;to&nbsp;very&nbsp;large&nbsp;projects&nbsp;with&nbsp;speed&nbsp;and&nbsp;efficiency.</span></span></span></div></pre><ul>
+<li>分布式版本控制系统 (Distributed Version Control System, DVCS)</li>
+</ul>
+<p>每个工作环境下都有<em>全部</em>版本信息。当服务器出现问题时，可以通过任何一个工作环境来恢复服务器上的内容。</p>
+<p><img src="E:\michael\Programs\git-tutorial\images\git-dvcs.png" alt="DVCS"></p>
+<h1 id="-">初始化配置</h1>
+<ul>
+<li>作者身份</li>
+</ul>
+<p>Git 要求每一次变更都要注明作者的身份<del>以便分锅</del>：</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;config&nbsp;--global&nbsp;user.name&nbsp;{Your&nbsp;Name}</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;config&nbsp;--global&nbsp;user.email&nbsp;{your@email.com}</span></span></span></div></pre><ul>
+<li>其他（可选）</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;config&nbsp;--global&nbsp;push.default&nbsp;matching</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;config&nbsp;--global&nbsp;filemode&nbsp;true</span></span></span></div></pre><ul>
+<li>查看配置</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;config&nbsp;--list</span></span></span></div></pre><h1 id="-">本地变更</h1>
+<ul>
+<li>新建 Repository</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>mkdir&nbsp;{my-project}&nbsp;&amp;&amp;&nbsp;cd&nbsp;{my-project}</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;init</span></span></span></div></pre><p>这时会发现 <code>{my-project}</code> 目录下出现了隐藏目录 <code>.git</code> 。这个目录就是 Git 用来存储 Repository 信息的目录。</p>
+<ul>
+<li>文件的跟踪 (Track) 与 Stage (Cache)</li>
+</ul>
+<p><img src="E:\michael\Programs\git-tutorial\images\git-add-commit.png" alt="Stage"></p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;add&nbsp;{FILE}</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;add&nbsp;-A</span></span></span></div></pre><p>只有 <code>add</code> 过的文件会被 Git 跟踪。</p>
+<ul>
+<li>查看变更</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;status</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;diff</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;diff&nbsp;--cached</span></span></span></div></pre><ul>
+<li>提交变更</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;commit&nbsp;-m&nbsp;{Commit&nbsp;Message}</span></span></span></div></pre><p>只有 stage 里的内容会被提交。</p>
+<ul>
+<li>查看版本信息</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;log</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;log&nbsp;-p</span></span></span></div></pre><ul>
+<li>HEAD 的概念</li>
+</ul>
+<p><code>HEAD</code> 指当前工作环境下，上一次提交的变更。或者说，所有本地的变更，都是以 <code>HEAD</code> 作为参照的。</p>
+<p>再上一次的变更为 <code>HEAD^</code> 。</p>
+<ul>
+<li>取消变更</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;reset&nbsp;(--mixed)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;reset&nbsp;--hard&nbsp;|&nbsp;--soft</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;reset&nbsp;HEAD^</span></span></span></div></pre><p>单个文件：</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;checkout&nbsp;HEAD&nbsp;{FILE}</span></span></span></div></pre><ul>
+<li>文件操作</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;mv&nbsp;{FILE}&nbsp;{NEW_PATH}</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;rm&nbsp;{FILE}</span></span></span></div></pre><ul>
+<li>Ignore</li>
+</ul>
+<p>通过配置 <code>.gitignore</code> 文件，可以让 Git 在执行</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;add&nbsp;-A</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;status</span></span></span></div></pre><p>时忽略某些文件。但是，使用</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;add&nbsp;{FILE}</span></span></span></div></pre><p>仍可以强行跟踪这些文件（不推荐）。</p>
+<p>如果一个应当被忽略的文件已经被跟踪，可以使用</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;rm&nbsp;--cached&nbsp;{FILE}</span></span></span></div></pre><p>来取消跟踪 (untrack)。</p>
+<p>每个目录下都可以有一个 <code>.gitignore</code> 文件。</p>
+<ul>
+<li>其他</li>
+</ul>
+<p>通过配置 <code>.gitattribute</code> 文件，可以指定 Git 处理某些文件的策略，例如：</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta bullet-point star text"><span class="punctuation definition item text"><span>*</span></span><span>.txt&nbsp;binary</span></span></span></div></pre><p>可以让 Git 将所有 <code>.txt</code> 文件作为二进制文件处理，不对换行符进行操作。</p>
+<h1 id="-">分支管理</h1>
+<ul>
+<li>分支的概念</li>
+</ul>
+<p><img src="E:\michael\Programs\git-tutorial\images\git-branches.png" alt="Branch"></p>
+<p>使用 <code>git init</code> 建立的 Repository ，默认分支为 <code>master</code> 。</p>
+<p>每个分支实际上是指向一次变更的。</p>
+<ul>
+<li>新建分支</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;branch&nbsp;{NAME}</span></span></span></div></pre><p>将以 <code>HEAD</code> 为基础新建一个分支。</p>
+<ul>
+<li>分支列表</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;branch</span></span></span></div></pre><p>其中，标 <code>*</code> 的为当前所在分支。</p>
+<ul>
+<li>切换分支</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;checkout&nbsp;{NAME}</span></span></span></div></pre><ul>
+<li>合并分支</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;merge&nbsp;{NAME}</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;merge&nbsp;--no-ff&nbsp;{NAME}</span></span></span></div></pre><p>将会把 <code>{NAME}</code> 分支的变更合并进入当前分支。如果 Git 不能自动解决冲突，则需要手动解决冲突。</p>
+<p>一些操作规范：</p>
+<p>任何变更（包括新增、修改、删除），都应当只提交一次。</p>
+<p>如果多个分支都需要同一个变更（如，当新版正在开发过程中，线上版本需要修复 bug），应当在这几个分支共同的、最近的一次变更的基础上进行修改，提交之后再合并到各个分支上。</p>
+<h1 id="-">远程操作</h1>
+<ul>
+<li>远程 (Remote)</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;remote&nbsp;add&nbsp;{NAME}&nbsp;{URL}</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;clone&nbsp;{URL}&nbsp;[{DIR}]</span></span></span></div></pre><p>克隆下来的 Repository ，远程的默认名称为 <code>origin</code> 。</p>
+<p>当远程的 URL 发生变化时（如服务器IP变化），可以通过</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;remote&nbsp;set-url&nbsp;{NAME}&nbsp;{URL}</span></span></span></div></pre><ul>
+<li>远程分支列表</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;branch&nbsp;-a</span></span></span></div></pre><ul>
+<li>获取远程内容</li>
+</ul>
+<p>值得一提的是， Git 不会实时更新远程的内容，所以某一远程分支所指向的变更不一定是服务器上该分支所指向的变更。通过</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;fetch</span></span></span></div></pre><p>可以更新远程的状态。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;pull&nbsp;{REMOTE}&nbsp;{BRANCH}</span></span></span></div></pre><p>可以拉取远程的变更。它相当于</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;fetch</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;merge&nbsp;{REMOTE}/{BRANCH}</span></span></span></div></pre><ul>
+<li>推送到远程</li>
+</ul>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;push&nbsp;{REMOTE}&nbsp;{BRANCH}</span></span></span></div></pre><p>如果本地分支的内容不能通过快进模式推送到远程分支，则推送失败。</p>
+<p>如果需要强行覆盖远程分支的内容，可以用</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;push&nbsp;--force&nbsp;{REMOTE}&nbsp;{BRANCH}</span></span></span></div></pre><p>应当谨慎使用。注意，一些 Git 服务器会保护某些分支不能被覆盖。</p>
+<ul>
+<li>上游 (Upstream)</li>
+</ul>
+<p>远程是一个 Repository 级别的概念，而对于每一个分支来说，都可以有一个上游。</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;branch&nbsp;--set-upstream-to={REF}</span></span></span></div></pre><p>将会把分支的上游设为指定的分支。此时，</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;pull</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;push</span></span></span></div></pre><p>将会直接拉取/推送分支的远程。</p>
+<p>在推送时，也可以直接通过</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;push&nbsp;-u&nbsp;{REMOTE}&nbsp;{BRANCH}</span></span></span></div></pre><p>指定上游分支。</p>
+<p>查看上游：</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;branch&nbsp;-vv</span></span></span></div></pre><h1 id="-">项目管理</h1>
+<ul>
+<li>Subversion-Style Workflow</li>
+</ul>
+<p>适用于个人或小型项目。</p>
+<p><img src="E:\michael\Programs\git-tutorial\images\git-workflow-1.png" alt="Workflow-1"></p>
+<ul>
+<li>Integration Manager Workflow</li>
+</ul>
+<p><img src="E:\michael\Programs\git-tutorial\images\git-workflow-2.png" alt="Workflow-2"></p>
+<ul>
+<li>Dictator and Lieutenants Workflow</li>
+</ul>
+<p>适用于大型项目。</p>
+<p><img src="E:\michael\Programs\git-tutorial\images\git-workflow-3.png" alt="Workflow-3"></p>
+<ul>
+<li><p>利用分支权限实现工作流</p>
+</li>
+<li><p>多人合作项目的工作流</p>
+</li>
+</ul>
+<p><img src="E:\michael\Programs\git-tutorial\images\workflow-1.png" alt="Workflow-4"></p>
+<ul>
+<li>多个模块同时开发的工作流</li>
+</ul>
+<p><img src="E:\michael\Programs\git-tutorial\images\workflow-2.png" alt="Workflow-5"></p>
+<h1 id="-">划重点</h1>
+<ul>
+<li><p>什么是 Git ？</p>
+<ul>
+<li>概念：DVCS</li>
+</ul>
+</li>
+<li><p>初始化配置</p>
+<ul>
+<li>命令：<code>config</code></li>
+</ul>
+</li>
+<li><p>本地变更</p>
+<ul>
+<li><p>概念：Repository, Diff, Stage (Cache), Track, HEAD, Ignore</p>
+</li>
+<li><p>命令：<code>init</code>, <code>status</code>, <code>diff</code>, <code>add</code>, <code>commit</code>, <code>log</code>, <code>reset</code>, <code>mv</code>, <code>rm</code></p>
+</li>
+</ul>
+</li>
+<li><p>分支管理</p>
+<ul>
+<li><p>概念：Branch</p>
+</li>
+<li><p>命令：<code>branch</code>, <code>checkout</code>, <code>merge</code></p>
+</li>
+</ul>
+</li>
+<li><p>远程操作</p>
+<ul>
+<li><p>概念：Remote, Upstream</p>
+</li>
+<li><p>命令：<code>remote</code>, <code>clone</code>, <code>fetch</code>, <code>pull</code>, <code>push</code></p>
+</li>
+</ul>
+</li>
+<li><p>项目管理</p>
+<ul>
+<li>不同分支的作用</li>
+</ul>
+</li>
+</ul></body>
+</html>
