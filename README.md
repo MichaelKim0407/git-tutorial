@@ -106,8 +106,8 @@ git log -p
 * 取消变更
 
 ```
-git reset
-git reset --hard
+git reset (--mixed)
+git reset --hard | --soft
 git reset HEAD^
 ```
 
@@ -170,6 +170,8 @@ git rm --cached {FILE}
 
 使用 `git init` 建立的 Repository ，默认分支为 `master` 。
 
+每个分支实际上是指向一次变更的。
+
 * 新建分支
 
 ```
@@ -208,6 +210,93 @@ git merge --no-ff {NAME}
 如果多个分支都需要同一个变更（如，当新版正在开发过程中，线上版本需要修复 bug），应当在这几个分支共同的、最近的一次变更的基础上进行修改，提交之后再合并到各个分支上。
 
 # 远程操作
+
+* 远程 (Remote)
+
+```
+git remote add {NAME} {URL}
+git clone {URL} [{DIR}]
+```
+
+克隆下来的 Repository ，远程的默认名称为 `origin` 。
+
+当远程的 URL 发生变化时（如服务器IP变化），可以通过
+
+```
+git remote set-url {NAME} {URL}
+```
+
+* 远程分支列表
+
+```
+git branch -a
+```
+
+* 获取远程内容
+
+值得一提的是， Git 不会实时更新远程的内容，所以某一远程分支所指向的变更不一定是服务器上该分支所指向的变更。通过
+
+```
+git fetch
+```
+
+可以更新远程的状态。
+
+```
+git pull {REMOTE} {BRANCH}
+```
+
+可以拉取远程的变更。它相当于
+
+```
+git fetch
+git merge {REMOTE}/{BRANCH}
+```
+
+* 推送到远程
+
+```
+git push {REMOTE} {BRANCH}
+```
+
+如果需要强行覆盖远程分支的内容，可以用
+
+```
+git push --force {REMOTE} {BRANCH}
+```
+
+应当谨慎使用。注意，一些 Git 服务器会保护某些分支不能被覆盖。
+
+* 上游 (Upstream)
+
+远程是一个 Repository 级别的概念，而对于每一个分支来说，都可以有一个上游。
+
+```
+git branch --set-upstream-to={REF}
+```
+
+将会把分支的上游设为指定的分支。此时，
+
+```
+git pull
+git push
+```
+
+将会直接拉取/推送分支的远程。
+
+在推送时，也可以直接通过
+
+```
+git push -u {REMOTE} {BRANCH}
+```
+
+指定上游分支。
+
+查看上游：
+
+```
+git branch -vv
+```
 
 # 项目管理
 
