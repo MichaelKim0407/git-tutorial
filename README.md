@@ -259,6 +259,8 @@ git merge {REMOTE}/{BRANCH}
 git push {REMOTE} {BRANCH}
 ```
 
+如果本地分支的内容不能通过快进模式推送到远程分支，则推送失败。
+
 如果需要强行覆盖远程分支的内容，可以用
 
 ```
