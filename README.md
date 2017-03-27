@@ -226,6 +226,8 @@ git clone {URL} [{DIR}]
 git remote set-url {NAME} {URL}
 ```
 
+进行变更。
+
 * 远程分支列表
 
 ```
