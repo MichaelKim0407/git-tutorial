@@ -302,6 +302,28 @@ git branch -vv
 
 # 项目管理
 
+* Subversion-Style Workflow
+
+适用于个人或小型项目。
+
+![Workflow-1](images/git-workflow-1.png)
+
+* Integration Manager Workflow
+
+![Workflow-2](images/git-workflow-2.png)
+
+* Dictator and Lieutenants Workflow
+
+适用于大型项目。
+
+![Workflow-3](images/git-workflow-3.png)
+
+* 利用分支权限实现工作流
+
+* 多人合作的分支规范
+
+* 多个模块同时开发的分支规范
+
 # 划重点
 
 * 什么是 Git ？
@@ -331,3 +353,5 @@ git branch -vv
     * 命令：`remote`, `clone`, `fetch`, `pull`, `push`
 
 * 项目管理
+
+    * 不同分支的作用
