@@ -8,7 +8,7 @@
 
 * 初始化配置
 
-* 本地修改
+* 本地变更
 
 * 分支管理
 
@@ -32,11 +32,11 @@ Git is a free and open source distributed version control system designed to han
 
 * 作者身份
 
-Git 要求每一次修改都要注明作者的身份~~以便分锅~~
+Git 要求每一次变更都要注明作者的身份~~以便分锅~~：
 
 ```
-git config --global user.name "Your Name"
-git config --global user.email your@email.com
+git config --global user.name {Your Name}
+git config --global user.email {your@email.com}
 ```
 
 * 其他（可选）
@@ -52,29 +52,29 @@ git config --global filemode true
 git config --list
 ```
 
-# 本地修改
+# 本地变更
 
 * 新建 Repository
 
 ```
-mkdir my-project && cd my-project
+mkdir {my-project} && cd {my-project}
 git init
 ```
 
-这时会发现 `my-project` 目录下出现了隐藏目录 `.git` 。这个目录就是 Git 用来存储 Repository 信息的目录。
+这时会发现 `{my-project}` 目录下出现了隐藏目录 `.git` 。这个目录就是 Git 用来存储 Repository 信息的目录。
 
 * 文件的跟踪 (Track) 与 Stage (Cache)
 
 ![Stage](images/git-add-commit.png)
 
 ```
-git add FILE
+git add {FILE}
 git add -A
 ```
 
 只有 `add` 过的文件会被 Git 跟踪。
 
-* 查看修改
+* 查看变更
 
 ```
 git status
@@ -82,13 +82,13 @@ git diff
 git diff --cached
 ```
 
-* 提交修改
+* 提交变更
 
 ```
-git commit -m "Commit Message"
+git commit -m {Commit Message}
 ```
 
-只有 stage 里的内容会被提交
+只有 stage 里的内容会被提交。
 
 * 查看版本信息
 
@@ -97,7 +97,13 @@ git log
 git log -p
 ```
 
-* 取消修改
+* HEAD 的概念
+
+`HEAD` 指当前工作环境下，上一次提交的变更。或者说，所有本地的变更，都是以 `HEAD` 作为参照的。
+
+再上一次的变更为 `HEAD^` 。
+
+* 取消变更
 
 ```
 git reset
@@ -108,14 +114,14 @@ git reset HEAD^
 单个文件：
 
 ```
-git checkout FILE
+git checkout HEAD {FILE}
 ```
 
 * 文件操作
 
 ```
-git mv FILE NEW_PATH
-git rm FILE
+git mv {FILE} {NEW_PATH}
+git rm {FILE}
 ```
 
 * Ignore
@@ -130,7 +136,7 @@ git status
 时忽略某些文件。但是，使用
 
 ```
-git add FILE
+git add {FILE}
 ```
 
 仍可以强行跟踪这些文件（不推荐）。
@@ -138,7 +144,7 @@ git add FILE
 如果一个应当被忽略的文件已经被跟踪，可以使用
 
 ```
-git rm --cached FILE
+git rm --cached {FILE}
 ```
 
 来取消跟踪 (untrack)。
@@ -158,6 +164,49 @@ git rm --cached FILE
 
 # 分支管理
 
+* 分支的概念
+
+![Branch](images/git-branches.png)
+
+使用 `git init` 建立的 Repository ，默认分支为 `master` 。
+
+* 新建分支
+
+```
+git branch {NAME}
+```
+
+将以 `HEAD` 为基础新建一个分支。
+
+* 分支列表
+
+```
+git branch
+```
+
+其中，标 `*` 的为当前所在分支。
+
+* 切换分支
+
+```
+git checkout {NAME}
+```
+
+* 合并分支
+
+```
+git merge {NAME}
+git merge --no-ff {NAME}
+```
+
+将会把 `{NAME}` 分支的变更合并进入当前分支。如果 Git 不能自动解决冲突，则需要手动解决冲突。
+
+一些操作规范：
+
+任何变更（包括新增、修改、删除），都应当只提交一次。
+
+如果多个分支都需要同一个变更（如，当新版正在开发过程中，线上版本需要修复 bug），应当在这几个分支共同的、最近的一次变更的基础上进行修改，提交之后再合并到各个分支上。
+
 # 远程操作
 
 # 项目管理
@@ -172,9 +221,9 @@ git rm --cached FILE
 
     * 命令：`config`
 
-* 本地修改
+* 本地变更
 
-    * 概念：Repository, Diff, Stage (Cache), Track, Ignore
+    * 概念：Repository, Diff, Stage (Cache), Track, HEAD, Ignore
 
     * 命令：`init`, `status`, `diff`, `add`, `commit`, `log`, `reset`, `mv`, `rm`
 
