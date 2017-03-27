@@ -2,31 +2,27 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>README</title>
+    <title>Git 应用分享</title>
     <link rel="stylesheet" type="text/css" href="markdown.css">
 </head>
 
 <body class='markdown-preview' data-use-github-style>
 <h1 id="page1">Git 应用分享</h1>
 <ul>
-    <li>Author: 金正 <a href="mailto:jinzheng@miaozhen.com">&#106;&#x69;&#110;&#x7a;&#104;&#x65;&#x6e;&#103;&#x40;&#x6d;&#105;&#x61;&#111;&#x7a;&#104;&#101;&#110;&#x2e;&#x63;&#111;&#x6d;</a>
+    <li>
+        Author: 金正
+        <a href="mailto:jinzheng@miaozhen.com">&#106;&#x69;&#110;&#x7a;&#104;&#x65;&#x6e;&#103;&#x40;&#x6d;&#105;&#x61;&#111;&#x7a;&#104;&#101;&#110;&#x2e;&#x63;&#111;&#x6d;</a>
     </li>
 </ul>
 
 <h1 id="page2">分享内容</h1>
 <ul>
-    <li><p>什么是 Git ？</p>
-    </li>
-    <li><p>初始化配置</p>
-    </li>
-    <li><p>本地变更</p>
-    </li>
-    <li><p>分支管理</p>
-    </li>
-    <li><p>远程操作</p>
-    </li>
-    <li><p>项目管理</p>
-    </li>
+    <li><p>什么是 Git ？</p></li>
+    <li><p>初始化配置</p></li>
+    <li><p>本地变更</p></li>
+    <li><p>分支管理</p></li>
+    <li><p>远程操作</p></li>
+    <li><p>项目管理</p></li>
 </ul>
 
 <h1 id="page3">什么是 Git ？</h1>
@@ -38,7 +34,9 @@
 <p>
     每个工作环境下都有<em>全部</em>版本信息。当服务器出现问题时，可以通过任何一个工作环境来恢复服务器上的内容。
 </p>
-<p><img src="images/git-dvcs.png" alt="DVCS"></p>
+<p>
+    <img src="images/git-dvcs.png" alt="DVCS">
+</p>
 
 <h1 id="page4">初始化配置</h1>
 <ul>
@@ -82,7 +80,9 @@
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;add&nbsp;{FILE}</span></span></span></div><div
         class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;add&nbsp;-A</span></span></span></div></pre>
-<p>只有 <code>add</code> 过的文件会被 Git 跟踪。</p>
+<p>
+    只有 <code>add</code> 过的文件会被 Git 跟踪。
+</p>
 <ul>
     <li>查看变更</li>
 </ul>
@@ -97,7 +97,9 @@
 </ul>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;commit&nbsp;-m&nbsp;{Commit&nbsp;Message}</span></span></span></div></pre>
-<p>只有 stage 里的内容会被提交。</p>
+<p>
+    只有 stage 里的内容会被提交。
+</p>
 <ul>
     <li>查看版本信息</li>
 </ul>
@@ -107,8 +109,12 @@
 <ul>
     <li>HEAD 的概念</li>
 </ul>
-<p><code>HEAD</code> 指当前工作环境下，上一次提交的变更。或者说，所有本地的变更，都是以 <code>HEAD</code> 作为参照的。</p>
-<p>再上一次的变更为 <code>HEAD^</code> 。</p>
+<p>
+    <code>HEAD</code> 指当前工作环境下，上一次提交的变更。或者说，所有本地的变更，都是以 <code>HEAD</code> 作为参照的。
+</p>
+<p>
+    再上一次的变更为 <code>HEAD^</code> 。
+</p>
 <ul>
     <li>取消变更</li>
 </ul>
@@ -116,7 +122,9 @@
         class="meta paragraph text"><span>git&nbsp;reset&nbsp;(--mixed)</span></span></span></div><div
         class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;reset&nbsp;--hard&nbsp;|&nbsp;--soft</span></span></span></div><div
         class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;reset&nbsp;HEAD^</span></span></span></div></pre>
-<p>单个文件：</p>
+<p>
+    单个文件：
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;checkout&nbsp;HEAD&nbsp;{FILE}</span></span></span></div></pre>
 <ul>
@@ -128,47 +136,73 @@
 <ul>
     <li>Ignore</li>
 </ul>
-<p>通过配置 <code>.gitignore</code> 文件，可以让 Git 在执行</p>
+<p>
+    通过配置 <code>.gitignore</code> 文件，可以让 Git 在执行
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;add&nbsp;-A</span></span></span></div><div
         class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;status</span></span></span></div></pre>
-<p>时忽略某些文件。但是，使用</p>
+<p>
+    时忽略某些文件。但是，使用
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;add&nbsp;{FILE}</span></span></span></div></pre>
-<p>仍可以强行跟踪这些文件（不推荐）。</p>
-<p>如果一个应当被忽略的文件已经被跟踪，可以使用</p>
+<p>
+    仍可以强行跟踪这些文件（不推荐）。
+</p>
+<p>
+    如果一个应当被忽略的文件已经被跟踪，可以使用
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;rm&nbsp;--cached&nbsp;{FILE}</span></span></span></div></pre>
-<p>来取消跟踪 (untrack)。</p>
-<p>每个目录下都可以有一个 <code>.gitignore</code> 文件。</p>
+<p>
+    来取消跟踪 (untrack)。
+</p>
+<p>
+    每个目录下都可以有一个 <code>.gitignore</code> 文件。
+</p>
 <ul>
     <li>其他</li>
 </ul>
-<p>通过配置 <code>.gitattribute</code> 文件，可以指定 Git 处理某些文件的策略，例如：</p>
+<p>
+    通过配置 <code>.gitattribute</code> 文件，可以指定 Git 处理某些文件的策略，例如：
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta bullet-point star text"><span
         class="punctuation definition item text"><span>*</span></span><span>.txt&nbsp;binary</span></span></span></div></pre>
-<p>可以让 Git 将所有 <code>.txt</code> 文件作为二进制文件处理，不对换行符进行操作。</p>
+<p>
+    可以让 Git 将所有 <code>.txt</code> 文件作为二进制文件处理，不对换行符进行操作。
+</p>
 
 <h1 id="page6">分支管理</h1>
 <ul>
     <li>分支的概念</li>
 </ul>
-<p><img src="images/git-branches.png" alt="Branch"></p>
-<p>使用 <code>git init</code> 建立的 Repository ，默认分支为 <code>master</code> 。</p>
-<p>每个分支实际上是指向一次变更的。</p>
+<p>
+    <img src="images/git-branches.png" alt="Branch">
+</p>
+<p>
+    使用 <code>git init</code> 建立的 Repository ，默认分支为 <code>master</code> 。
+</p>
+<p>
+    每个分支实际上是指向一次变更的。
+</p>
 <ul>
     <li>新建分支</li>
 </ul>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;branch&nbsp;{NAME}</span></span></span></div></pre>
-<p>将以 <code>HEAD</code> 为基础新建一个分支。</p>
+<p>
+    将以 <code>HEAD</code> 为基础新建一个分支。
+</p>
 <ul>
     <li>分支列表</li>
 </ul>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;branch</span></span></span></div></pre>
-<p>其中，标 <code>*</code> 的为当前所在分支。</p>
+<p>
+    其中，标 <code>*</code> 的为当前所在分支。
+</p>
 <ul>
     <li>切换分支</li>
 </ul>
@@ -180,10 +214,18 @@
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;merge&nbsp;{NAME}</span></span></span></div><div
         class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;merge&nbsp;--no-ff&nbsp;{NAME}</span></span></span></div></pre>
-<p>将会把 <code>{NAME}</code> 分支的变更合并进入当前分支。如果 Git 不能自动解决冲突，则需要手动解决冲突。</p>
-<p>一些操作规范：</p>
-<p>任何变更（包括新增、修改、删除），都应当只提交一次。</p>
-<p>如果多个分支都需要同一个变更（如，当新版正在开发过程中，线上版本需要修复 bug），应当在这几个分支共同的、最近的一次变更的基础上进行修改，提交之后再合并到各个分支上。</p>
+<p>
+    将会把 <code>{NAME}</code> 分支的变更合并进入当前分支。如果 Git 不能自动解决冲突，则需要手动解决冲突。
+</p>
+<p>
+    一些操作规范：
+</p>
+<p>
+    任何变更（包括新增、修改、删除），都应当只提交一次。
+</p>
+<p>
+    如果多个分支都需要同一个变更（如，当新版正在开发过程中，线上版本需要修复 bug），应当在这几个分支共同的、最近的一次变更的基础上进行修改，提交之后再合并到各个分支上。
+</p>
 
 <h1 id="page7">远程操作</h1>
 <ul>
@@ -192,10 +234,17 @@
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;remote&nbsp;add&nbsp;{NAME}&nbsp;{URL}</span></span></span></div><div
         class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;clone&nbsp;{URL}&nbsp;[{DIR}]</span></span></span></div></pre>
-<p>克隆下来的 Repository ，远程的默认名称为 <code>origin</code> 。</p>
-<p>当远程的 URL 发生变化时（如服务器IP变化），可以通过</p>
+<p>
+    克隆下来的 Repository ，远程的默认名称为 <code>origin</code> 。
+</p>
+<p>
+    当远程的 URL 发生变化时（如服务器IP变化），可以通过
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;remote&nbsp;set-url&nbsp;{NAME}&nbsp;{URL}</span></span></span></div></pre>
+<p>
+    进行变更。
+</p>
 <ul>
     <li>远程分支列表</li>
 </ul>
@@ -204,13 +253,19 @@
 <ul>
     <li>获取远程内容</li>
 </ul>
-<p>值得一提的是， Git 不会实时更新远程的内容，所以某一远程分支所指向的变更不一定是服务器上该分支所指向的变更。通过</p>
+<p>
+    值得一提的是， Git 不会实时更新远程的内容，所以某一远程分支所指向的变更不一定是服务器上该分支所指向的变更。通过
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;fetch</span></span></span></div></pre>
-<p>可以更新远程的状态。</p>
+<p>
+    可以更新远程的状态。
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;pull&nbsp;{REMOTE}&nbsp;{BRANCH}</span></span></span></div></pre>
-<p>可以拉取远程的变更。它相当于</p>
+<p>
+    可以拉取远程的变更。它相当于
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;fetch</span></span></span></div><div
         class="line"><span class="text plain"><span class="meta paragraph text"><span>git&nbsp;merge&nbsp;{REMOTE}/{BRANCH}</span></span></span></div></pre>
@@ -219,28 +274,46 @@
 </ul>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;push&nbsp;{REMOTE}&nbsp;{BRANCH}</span></span></span></div></pre>
-<p>如果本地分支的内容不能通过快进模式推送到远程分支，则推送失败。</p>
-<p>如果需要强行覆盖远程分支的内容，可以用</p>
+<p>
+    如果本地分支的内容不能通过快进模式推送到远程分支，则推送失败。
+</p>
+<p>
+    如果需要强行覆盖远程分支的内容，可以用
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;push&nbsp;--force&nbsp;{REMOTE}&nbsp;{BRANCH}</span></span></span></div></pre>
-<p>应当谨慎使用。注意，一些 Git 服务器会保护某些分支不能被覆盖。</p>
+<p>
+    应当谨慎使用。注意，一些 Git 服务器会保护某些分支不能被覆盖。
+</p>
 <ul>
     <li>上游 (Upstream)</li>
 </ul>
-<p>远程是一个 Repository 级别的概念，而对于每一个分支来说，都可以有一个上游。</p>
+<p>
+    远程是一个 Repository 级别的概念，而对于每一个分支来说，都可以有一个上游。
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;branch&nbsp;--set-upstream-to={REF}</span></span></span></div></pre>
-<p>将会把分支的上游设为指定的分支。此时，</p>
+<p>
+    将会把分支的上游设为指定的分支。此时，
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;pull</span></span></span></div><div class="line"><span
         class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;push</span></span></span></div></pre>
-<p>将会直接拉取/推送分支的远程。</p>
-<p>在推送时，也可以直接通过</p>
+<p>
+    将会直接拉取/推送分支的远程。
+</p>
+<p>
+    在推送时，也可以直接通过
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;push&nbsp;-u&nbsp;{REMOTE}&nbsp;{BRANCH}</span></span></span></div></pre>
-<p>指定上游分支。</p>
-<p>查看上游：</p>
+<p>
+    指定上游分支。
+</p>
+<p>
+    查看上游：
+</p>
 <pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span
         class="meta paragraph text"><span>git&nbsp;branch&nbsp;-vv</span></span></span></div></pre>
 
@@ -248,69 +321,93 @@
 <ul>
     <li>Subversion-Style Workflow</li>
 </ul>
-<p>适用于个人或小型项目。</p>
-<p><img src="images/git-workflow-1.png" alt="Workflow-1"></p>
+<p>
+    适用于个人或小型项目。
+</p>
+<p>
+    <img src="images/git-workflow-1.png" alt="Workflow-1">
+</p>
 <ul>
     <li>Integration Manager Workflow</li>
 </ul>
-<p><img src="images/git-workflow-2.png" alt="Workflow-2"></p>
+<p>
+    <img src="images/git-workflow-2.png" alt="Workflow-2">
+</p>
 <ul>
     <li>Dictator and Lieutenants Workflow</li>
 </ul>
-<p>适用于大型项目。</p>
-<p><img src="images/git-workflow-3.png" alt="Workflow-3"></p>
+<p>
+    适用于大型项目。
+</p>
+<p>
+    <img src="images/git-workflow-3.png" alt="Workflow-3">
+</p>
 <ul>
-    <li><p>利用分支权限实现工作流</p>
-    </li>
-    <li><p>多人合作项目的工作流</p>
-    </li>
+    <li><p>利用分支权限实现工作流</p></li>
+    <li><p>多人合作项目的工作流</p></li>
 </ul>
-<p><img src="images/workflow-1.png" alt="Workflow-4"></p>
+<p>
+    <img src="images/workflow-1.png" alt="Workflow-4">
+</p>
 <ul>
     <li>多个模块同时开发的工作流</li>
 </ul>
-<p><img src="images/workflow-2.png" alt="Workflow-5"></p>
+<p>
+    <img src="images/workflow-2.png" alt="Workflow-5">
+</p>
 
 <h1 id="page9">划重点</h1>
 <ul>
-    <li><p>什么是 Git ？</p>
+    <li>
+        <p>什么是 Git ？</p>
         <ul>
             <li>概念：DVCS</li>
         </ul>
     </li>
-    <li><p>初始化配置</p>
+    <li>
+        <p>初始化配置</p>
         <ul>
             <li>命令：<code>config</code></li>
         </ul>
     </li>
-    <li><p>本地变更</p>
+    <li>
+        <p>本地变更</p>
         <ul>
-            <li><p>概念：Repository, Diff, Stage (Cache), Track, HEAD, Ignore</p>
+            <li>
+                <p>概念：Repository, Diff, Stage (Cache), Track, HEAD, Ignore</p>
             </li>
-            <li><p>命令：<code>init</code>, <code>status</code>, <code>diff</code>, <code>add</code>,
-                <code>commit</code>, <code>log</code>, <code>reset</code>, <code>mv</code>,
-                <code>rm</code></p>
+            <li>
+                <p>命令：<code>init</code>, <code>status</code>, <code>diff</code>, <code>add</code>,
+                    <code>commit</code>, <code>log</code>, <code>reset</code>, <code>mv</code>,
+                    <code>rm</code></p>
             </li>
         </ul>
     </li>
-    <li><p>分支管理</p>
+    <li>
+        <p>分支管理</p>
         <ul>
-            <li><p>概念：Branch</p>
+            <li>
+                <p>概念：Branch</p>
             </li>
-            <li><p>命令：<code>branch</code>, <code>checkout</code>, <code>merge</code></p>
+            <li>
+                <p>命令：<code>branch</code>, <code>checkout</code>, <code>merge</code></p>
             </li>
         </ul>
     </li>
-    <li><p>远程操作</p>
+    <li>
+        <p>远程操作</p>
         <ul>
-            <li><p>概念：Remote, Upstream</p>
+            <li>
+                <p>概念：Remote, Upstream</p>
             </li>
-            <li><p>命令：<code>remote</code>, <code>clone</code>, <code>fetch</code>, <code>pull</code>,
-                <code>push</code></p>
+            <li>
+                <p>命令：<code>remote</code>, <code>clone</code>, <code>fetch</code>, <code>pull</code>,
+                    <code>push</code></p>
             </li>
         </ul>
     </li>
-    <li><p>项目管理</p>
+    <li>
+        <p>项目管理</p>
         <ul>
             <li>不同分支的作用</li>
         </ul>
