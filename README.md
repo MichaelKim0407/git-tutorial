@@ -320,9 +320,13 @@ git branch -vv
 
 * 利用分支权限实现工作流
 
-* 多人合作的分支规范
+* 多人合作项目的工作流
 
-* 多个模块同时开发的分支规范
+![Workflow-4](images/workflow-1.png)
+
+* 多个模块同时开发的工作流
+
+![Workflow-5](images/workflow-2.png)
 
 # 划重点
 
