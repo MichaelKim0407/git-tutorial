@@ -10,151 +10,84 @@ body {
 }
 
 body > :first-child {
-    margin-top: 0px !important;
+    margin-top: 0 !important;
 }
 
 body > :last-child {
-    margin-bottom: 0px !important;
+    margin-bottom: 0 !important;
 }
 
-body a:not([href]) {
-    color: inherit;
-    text-decoration: none;
-}
-
-body .absent {
-    color: rgb(204, 0, 0);
-}
-
-body .anchor {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    display: block;
-    padding-right: 6px;
-    padding-left: 30px;
-    margin-left: -30px;
-}
-
-body .anchor:focus {
-    outline: none;
-}
-
-body h1 {
+h1 {
     position: relative;
     margin-top: 1em;
     margin-bottom: 16px;
     font-weight: bold;
-    line-height: 1.4;
-}
-
-body h1 {
     padding-bottom: 0.3em;
     font-size: 2.25em;
     line-height: 1.2;
     border-bottom: 1px solid rgb(238, 238, 238);
 }
 
-body p,
-body ul,
-body pre {
-    margin-top: 0px;
+p,
+ul,
+pre {
+    margin-top: 0;
     margin-bottom: 16px;
 }
 
-body ul {
+ul {
     padding-left: 2em;
 }
 
-body ul ul {
-    margin-top: 0px;
-    margin-bottom: 0px;
+ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-body li > p {
+li > p {
     margin-top: 16px;
 }
 
-body img {
+img {
     max-width: 100%;
     box-sizing: border-box;
 }
 
-body code {
-    padding: 0.2em 0px;
-    margin: 0px;
+code {
+    padding: 0.2em 0;
+    margin: 0;
     font-size: 85%;
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.0392157);
+    color: inherit;
 }
 
-body code::before,
-body code::after {
+code::before,
+code::after {
     letter-spacing: -0.2em;
     content: " ";
 }
 
-body del code {
-    text-decoration: inherit;
-}
-
-body pre > code {
-    padding: 0px;
-    margin: 0px;
-    font-size: 100%;
-    word-break: normal;
-    white-space: pre;
-    border: 0px;
-    background: transparent;
-}
-
-body pre {
+pre {
     padding: 16px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
     border-radius: 3px;
     background-color: rgb(247, 247, 247);
-}
-
-body pre {
     word-wrap: normal;
 }
 
-body pre code {
-    display: inline;
-    max-width: initial;
-    padding: 0px;
-    margin: 0px;
-    overflow: initial;
-    line-height: inherit;
-    word-wrap: normal;
-    border: 0px;
-    background-color: transparent;
-}
-
-body pre code::before,
-body pre code::after {
-    content: normal;
-}
-
-body a {
+a {
     color: rgb(51, 122, 183);
 }
 
-body code {
-    color: inherit;
-}
-
-body pre.editor-colors {
+pre.editor-colors {
     padding: 0.8em 1em;
     margin-bottom: 1em;
     font-size: 0.85em;
     border-radius: 4px;
     overflow: auto;
-}
-
-pre.editor-colors {
     background-color: #282c34;
     color: #abb2bf;
 }
