@@ -11,7 +11,7 @@
 <ul>
     <li>
         Author: 金正
-        <a href="mailto:jinzheng@miaozhen.com">&#106;&#x69;&#110;&#x7a;&#104;&#x65;&#x6e;&#103;&#x40;&#x6d;&#105;&#x61;&#111;&#x7a;&#104;&#101;&#110;&#x2e;&#x63;&#111;&#x6d;</a>
+        <a href="mailto:jinzheng@miaozhen.com">jinzheng@miaozhen.com</a>
     </li>
 </ul>
 
@@ -26,7 +26,9 @@
 </ul>
 
 <h1 id="page3">什么是 Git ？</h1>
-<pre>Git&nbsp;is&nbsp;a&nbsp;free&nbsp;and&nbsp;open&nbsp;source&nbsp;distributed&nbsp;version&nbsp;control&nbsp;system&nbsp;designed&nbsp;to&nbsp;handle&nbsp;everything&nbsp;from&nbsp;small&nbsp;to&nbsp;very&nbsp;large&nbsp;projects&nbsp;with&nbsp;speed&nbsp;and&nbsp;efficiency.</pre>
+<pre>
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+</pre>
 <ul>
     <li>分布式版本控制系统 (Distributed Version Control System, DVCS)</li>
 </ul>
@@ -44,24 +46,32 @@
 <p>
     Git 要求每一次变更都要注明作者的身份<strike>以便分锅</strike>：
 </p>
-<pre>git&nbsp;config&nbsp;--global&nbsp;user.name&nbsp;{Your&nbsp;Name}
-git&nbsp;config&nbsp;--global&nbsp;user.email&nbsp;{your@email.com}</pre>
+<pre>
+git config --global user.name {Your Name}
+git config --global user.email {your@email.com}
+</pre>
 <ul>
     <li>其他（可选）</li>
 </ul>
-<pre>git&nbsp;config&nbsp;--global&nbsp;push.default&nbsp;matching
-git&nbsp;config&nbsp;--global&nbsp;filemode&nbsp;true</pre>
+<pre>
+git config --global push.default matching
+git config --global filemode true
+</pre>
 <ul>
     <li>查看配置</li>
 </ul>
-<pre>git&nbsp;config&nbsp;--list</pre>
+<pre>
+git config --list
+</pre>
 
 <h1 id="page5">本地变更</h1>
 <ul>
     <li>新建 Repository</li>
 </ul>
-<pre>mkdir&nbsp;{my-project}&nbsp;&amp;&amp;&nbsp;cd&nbsp;{my-project}
-git&nbsp;init</pre>
+<pre>
+mkdir {my-project} && cd {my-project}
+git init
+</pre>
 <p>
     这时会发现 <code>{my-project}</code> 目录下出现了隐藏目录 <code>.git</code> 。这个目录就是 Git 用来存储 Repository 信息的目录。
 </p>
@@ -69,29 +79,37 @@ git&nbsp;init</pre>
     <li>文件的跟踪 (Track) 与 Stage (Cache)</li>
 </ul>
 <p><img src="images/git-add-commit.png" alt="Stage"></p>
-<pre>git&nbsp;add&nbsp;{FILE}
-git&nbsp;add&nbsp;-A</pre>
+<pre>
+git add {FILE}
+git add -A
+</pre>
 <p>
     只有 <code>add</code> 过的文件会被 Git 跟踪。
 </p>
 <ul>
     <li>查看变更</li>
 </ul>
-<pre>git&nbsp;status
-git&nbsp;diff
-git&nbsp;diff&nbsp;--cached</pre>
+<pre>
+git status
+git diff
+git diff --cached
+</pre>
 <ul>
     <li>提交变更</li>
 </ul>
-<pre>git&nbsp;commit&nbsp;-m&nbsp;{Commit&nbsp;Message}</pre>
+<pre>
+git commit -m {Commit Message}
+</pre>
 <p>
     只有 stage 里的内容会被提交。
 </p>
 <ul>
     <li>查看版本信息</li>
 </ul>
-<pre>git&nbsp;log
-git&nbsp;log&nbsp;-p</pre>
+<pre>
+git log
+git log -p
+</pre>
 <ul>
     <li>HEAD 的概念</li>
 </ul>
@@ -104,37 +122,49 @@ git&nbsp;log&nbsp;-p</pre>
 <ul>
     <li>取消变更</li>
 </ul>
-<pre>git&nbsp;reset&nbsp;(--mixed)
-git&nbsp;reset&nbsp;--hard&nbsp;|&nbsp;--soft
-git&nbsp;reset&nbsp;HEAD^</pre>
+<pre>
+git reset (--mixed)
+git reset --hard | --soft
+git reset HEAD^
+</pre>
 <p>
     单个文件：
 </p>
-<pre>git&nbsp;checkout&nbsp;HEAD&nbsp;{FILE}</pre>
+<pre>
+git checkout HEAD {FILE}
+</pre>
 <ul>
     <li>文件操作</li>
 </ul>
-<pre>git&nbsp;mv&nbsp;{FILE}&nbsp;{NEW_PATH}
-git&nbsp;rm&nbsp;{FILE}</pre>
+<pre>
+git mv {FILE} {NEW_PATH}
+git rm {FILE}
+</pre>
 <ul>
     <li>Ignore</li>
 </ul>
 <p>
     通过配置 <code>.gitignore</code> 文件，可以让 Git 在执行
 </p>
-<pre>git&nbsp;add&nbsp;-A
-git&nbsp;status</pre>
+<pre>
+git add -A
+git status
+</pre>
 <p>
     时忽略某些文件。但是，使用
 </p>
-<pre>git&nbsp;add&nbsp;{FILE}</pre>
+<pre>
+git add {FILE}
+</pre>
 <p>
     仍可以强行跟踪这些文件（不推荐）。
 </p>
 <p>
     如果一个应当被忽略的文件已经被跟踪，可以使用
 </p>
-<pre>git&nbsp;rm&nbsp;--cached&nbsp;{FILE}</pre>
+<pre>
+git rm --cached {FILE}
+</pre>
 <p>
     来取消跟踪 (untrack)。
 </p>
@@ -147,7 +177,9 @@ git&nbsp;status</pre>
 <p>
     通过配置 <code>.gitattribute</code> 文件，可以指定 Git 处理某些文件的策略，例如：
 </p>
-<pre>*.txt&nbsp;binary</pre>
+<pre>
+*.txt binary
+</pre>
 <p>
     可以让 Git 将所有 <code>.txt</code> 文件作为二进制文件处理，不对换行符进行操作。
 </p>
@@ -168,26 +200,34 @@ git&nbsp;status</pre>
 <ul>
     <li>新建分支</li>
 </ul>
-<pre>git&nbsp;branch&nbsp;{NAME}</pre>
+<pre>
+git branch {NAME}
+</pre>
 <p>
     将以 <code>HEAD</code> 为基础新建一个分支。
 </p>
 <ul>
     <li>分支列表</li>
 </ul>
-<pre>git&nbsp;branch</pre>
+<pre>
+git branch
+</pre>
 <p>
     其中，标 <code>*</code> 的为当前所在分支。
 </p>
 <ul>
     <li>切换分支</li>
 </ul>
-<pre>git&nbsp;checkout&nbsp;{NAME}</pre>
+<pre>
+git checkout {NAME}
+</pre>
 <ul>
     <li>合并分支</li>
 </ul>
-<pre>git&nbsp;merge&nbsp;{NAME}
-git&nbsp;merge&nbsp;--no-ff&nbsp;{NAME}</pre>
+<pre>
+git merge {NAME}
+git merge --no-ff {NAME}
+</pre>
 <p>
     将会把 <code>{NAME}</code> 分支的变更合并进入当前分支。如果 Git 不能自动解决冲突，则需要手动解决冲突。
 </p>
@@ -205,49 +245,65 @@ git&nbsp;merge&nbsp;--no-ff&nbsp;{NAME}</pre>
 <ul>
     <li>远程 (Remote)</li>
 </ul>
-<pre>git&nbsp;remote&nbsp;add&nbsp;{NAME}&nbsp;{URL}
-git&nbsp;clone&nbsp;{URL}&nbsp;[{DIR}]</pre>
+<pre>
+git remote add {NAME} {URL}
+git clone {URL} [{DIR}]
+</pre>
 <p>
     克隆下来的 Repository ，远程的默认名称为 <code>origin</code> 。
 </p>
 <p>
     当远程的 URL 发生变化时（如服务器IP变化），可以通过
 </p>
-<pre>git&nbsp;remote&nbsp;set-url&nbsp;{NAME}&nbsp;{URL}</pre>
+<pre>
+git remote set-url {NAME} {URL}
+</pre>
 <p>
     进行变更。
 </p>
 <ul>
     <li>远程分支列表</li>
 </ul>
-<pre>git&nbsp;branch&nbsp;-a</pre>
+<pre>
+git branch -a
+</pre>
 <ul>
     <li>获取远程内容</li>
 </ul>
 <p>
     值得一提的是， Git 不会实时更新远程的内容，所以某一远程分支所指向的变更不一定是服务器上该分支所指向的变更。通过
 </p>
-<pre>git&nbsp;fetch</pre>
+<pre>
+git fetch
+</pre>
 <p>
     可以更新远程的状态。
 </p>
-<pre>git&nbsp;pull&nbsp;{REMOTE}&nbsp;{BRANCH}</pre>
+<pre>
+git pull {REMOTE} {BRANCH}
+</pre>
 <p>
     可以拉取远程的变更。它相当于
 </p>
-<pre>git&nbsp;fetch
-git&nbsp;merge&nbsp;{REMOTE}/{BRANCH}</pre>
+<pre>
+git fetch
+git merge {REMOTE}/{BRANCH}
+</pre>
 <ul>
     <li>推送到远程</li>
 </ul>
-<pre>git&nbsp;push&nbsp;{REMOTE}&nbsp;{BRANCH}</pre>
+<pre>
+git push {REMOTE} {BRANCH}
+</pre>
 <p>
     如果本地分支的内容不能通过快进模式推送到远程分支，则推送失败。
 </p>
 <p>
     如果需要强行覆盖远程分支的内容，可以用
 </p>
-<pre>git&nbsp;push&nbsp;--force&nbsp;{REMOTE}&nbsp;{BRANCH}</pre>
+<pre>
+git push --force {REMOTE} {BRANCH}
+</pre>
 <p>
     应当谨慎使用。注意，一些 Git 服务器会保护某些分支不能被覆盖。
 </p>
@@ -257,26 +313,34 @@ git&nbsp;merge&nbsp;{REMOTE}/{BRANCH}</pre>
 <p>
     远程是一个 Repository 级别的概念，而对于每一个分支来说，都可以有一个上游。
 </p>
-<pre>git&nbsp;branch&nbsp;--set-upstream-to={REF}</pre>
+<pre>
+git branch --set-upstream-to={REF}
+</pre>
 <p>
     将会把分支的上游设为指定的分支。此时，
 </p>
-<pre>git&nbsp;pull
-git&nbsp;push</pre>
+<pre>
+git pull
+git push
+</pre>
 <p>
     将会直接拉取/推送分支的远程。
 </p>
 <p>
     在推送时，也可以直接通过
 </p>
-<pre>git&nbsp;push&nbsp;-u&nbsp;{REMOTE}&nbsp;{BRANCH}</pre>
+<pre>
+git push -u {REMOTE} {BRANCH}
+</pre>
 <p>
     指定上游分支。
 </p>
 <p>
     查看上游：
 </p>
-<pre>git&nbsp;branch&nbsp;-vv</pre>
+<pre>
+git branch -vv
+</pre>
 
 <h1 id="page8">项目管理</h1>
 <ul>
