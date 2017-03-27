@@ -69,25 +69,17 @@ code::after {
 }
 
 pre {
-    padding: 16px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    border-radius: 3px;
     background-color: rgb(247, 247, 247);
     word-wrap: normal;
+    padding: 0.8em 1em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    /*color: #abb2bf;*/
 }
 
 a {
     color: rgb(51, 122, 183);
-}
-
-pre.editor-colors {
-    padding: 0.8em 1em;
-    margin-bottom: 1em;
-    font-size: 0.85em;
-    border-radius: 4px;
-    overflow: auto;
-    background-color: #282c34;
-    color: #abb2bf;
 }
