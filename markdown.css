@@ -9,10 +9,6 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-body > :first-child {
-    margin-top: 0 !important;
-}
-
 body > :last-child {
     margin-bottom: 0 !important;
 }

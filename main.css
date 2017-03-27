@@ -1,0 +1,18 @@
+#navigation {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    width: auto;
+    height: auto;
+    background-color: lightgoldenrodyellow;
+    z-index: 1;
+}
+
+#navigation ul {
+    margin: 20px 20px 20px 40px;
+    padding: 0;
+}
+
+#page1 {
+    margin-top: 0; !important;
+}
